@@ -1,0 +1,16 @@
+name: Render Keep Alive B
+
+on:
+  schedule:
+    # Cada 7 minutos, de 07:00 a 22:59 UTC
+    - cron: "*/3 7-22 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render API
+        run: |
+          echo "Pinging Render (B)..."
+          curl -I --max-time 15 https://TU_API.onrender.com/health || true
