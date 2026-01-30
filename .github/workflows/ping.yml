@@ -2,7 +2,6 @@ name: Render Keep Alive B
 
 on:
   schedule:
-    # Cada 7 minutos, de 07:00 a 22:59 UTC
     - cron: "*/5 10-23 * * *"
     - cron: "*/5 0-1 * * *"
   workflow_dispatch:
